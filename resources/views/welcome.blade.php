@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
+        <title>MTs Darul Hikam Binong.id</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -20,18 +20,19 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+                <a class="navbar-brand" href="#page-top"><img src="{{asset('mts/assets/img/Profil MTS.png')}}" alt="..." style="width:58px; height: 58px" /></a>
+                                <div class="masthead-heading text-uppercase" style="color:white;font-family:;">MTS Darul Hikam Binong</div>
+ 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#profil guru">Profil Guru</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ekskul">Ekskul</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sejarah">Tentang Kami</a></li>             
+                        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
                     </ul>
                 </div>
             </div>
@@ -39,52 +40,179 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+                <div class="masthead-heading text-uppercase"></div>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        <!-- Dokumentasi Eskul -->
+<section class="page-section bg-light" id="profil guru">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase" >Profil Guru</h2>
+            <h3 class="section-subheading text-muted">Daftar Guru</h3>
+        </div>
+
+        <div class="row">
+
+            <!-- Foto 1 -->
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a data-bs-toggle="modal" href="#foto1">
+                        <img class="img-fluid" src="{{asset('mts/assets/img/profil guru/guru 1.jpg')}}" alt="paskib">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Bu Rina</div>
+                        <div class="portfolio-caption-subheading text-muted">Guru Mapel Bahasa Indonesia</div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Foto 2 -->
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a data-bs-toggle="modal" href="#foto2">
+                        <img class="img-fluid" src="{{asset('mts/assets/img/profil guru/guru 2.jpg')}}" alt="Futsal">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Bu Rini</div>
+                        <div class="portfolio-caption-subheading text-muted">Guru Mapel Matematika</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a data-bs-toggle="modal" href="#foto3">
+                        <img class="img-fluid" src="{{asset('mts/assets/img/profil guru/guru 3.jpg')}}" alt="Paskibra">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Pa Asep</div>
+                        <div class="portfolio-caption-subheading text-muted">Guru Mapel Agama</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a data-bs-toggle="modal" href="#foto4">
+                        <img class="img-fluid" src="{{asset('mts/assets/img/profil guru/guru 4.jpg')}}" alt="Basket">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Bu Dika</div>
+                        <div class="portfolio-caption-subheading text-muted">Guru Bk</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 5 -->
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a data-bs-toggle="modal" href="#foto5">
+                        <img class="img-fluid" src="{{asset('mts/assets/img/profil guru/guru 5.jpg')}}" alt="Tari">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Bu Putri</div>
+                        <div class="portfolio-caption-subheading text-muted">Guru Mapel Bahasa Inggris</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Foto 6 -->
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a data-bs-toggle="modal" href="#foto6">
+                        <img class="img-fluid" src="{{asset('mts/assets/img/profil guru/guru 6.jpg')}}" alt="Voli">
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Bu nadin</div>
+                        <div class="portfolio-caption-subheading text-muted">Guru Mapel Senibudaya</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Modal Foto -->
+<div class="portfolio-modal modal fade" id="foto1" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2>Bu Rina</h2>
+                <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/profil guru/guru 1.jpg')}}" alt="">
+                <p>Guru Mapel Bahasa Indonesia</p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="foto2" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2>Bu Rini</h2>
+                <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/profil guru/guru 2.jpg')}}" alt="">
+                <p>Guru Mapel Matematika</p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="foto3" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2>Pa Asep</h2>
+                <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/profil guru/guru 3.jpg')}}" alt="">
+                <p>Guru Mapel Agama</p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="foto4" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2>Bu Dika</h2>
+                <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/profil guru/guru 4.jpg')}}" alt="">
+                <p>Guru BK</p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div><div class="portfolio-modal modal fade" id="foto5" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2>Bu Putri</h2>
+                <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/profil guru/guru 5.jpg')}}" alt="">
+                <p>Guru Mapel Bahasa Inggris</p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="foto6" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2>Bu nadin</h2>
+                <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/profil guru/guru 6.jpg')}}" alt="">
+                <p>Guru Mapel Senibudaya</p>
+                <button class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section bg-light" id="ekskul">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Ekstrakurikuler</h2>
+                    <h3 class="section-subheading text-muted">Daftar Ekskul.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -92,13 +220,13 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid" src="{{asset('mts/assets/img/Foto mts/paskib 2.jpeg')}}" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                                <div class="portfolio-caption-heading">Paskibra</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -107,13 +235,13 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="{{asset('mts/assets/img/Foto mts/pramuka 4.jpeg')}}" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">Pramuka</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -122,13 +250,13 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <img class="img-fluid" src="{{asset('mts/assets/img/Foto mts/futsal 1.jpeg')}}" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-heading">Futsal</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -137,13 +265,13 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-fluid" src="{{asset('mts/assets/img/Foto mts/voli 1.jpeg')}}" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-heading">Voli</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -152,13 +280,13 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid" src="{{asset('mts/assets/img/eskul/eskul 5.jpg')}}" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">Karate</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -167,13 +295,13 @@
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
                                 <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                    <div class="portfolio-hover-content"></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="{{asset('mts/assets/img/eskul/eskul 6.jpg')}}" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-heading">Seni Tari</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
                             </div>
                         </div>
                     </div>
@@ -181,61 +309,61 @@
             </div>
         </section>
         <!-- About-->
-        <section class="page-section" id="about">
+        <section class="page-section" id="sejarah">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Tentang Kami</h2>
+                    <h3 class="section-subheading text-muted">MTS Darul Hikam Binong</h3>
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('mts/assets/img/Profil MTS.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4>1970-1973</h4>
+                                <h4 class="subheading">Tanggal Berdiri</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">MTS DARUL HIKAM didirikan pada tanggal 1 Januari 1970 dengan Nomor SK Pendirian yang berada dalam naungan Kementerian Agama. </p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('mts/assets/img/Profil MTS.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
+                                <h4>2024-2025</h4>
+                                <h4 class="subheading">kelulusan</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Kelulusan 100%: Mempertahankan rekor kelulusan sempurna bagi seluruh siswa kelas IX dalam ujian akhir nasional/madrasah.</p></div>
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('mts/assets/img/Profil MTS.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>2024</h4>
+                                <h4 class="subheading"></h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Meraih berbagai juara dalam ajang Kompetisi Sains Madrasah (KSM/OSM) untuk mata pelajaran Matematika dan IPA.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{{asset('mts/assets/img/Profil MTS.png')}}" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
+                                <h4>2025</h4>
+                                <h4 class="subheading">Olimpiade Keagamaan</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Sekolah ini dikenal sebagai lembaga pendidikan berprestasi, salah satunya dengan meraih juara satu pada Olimpiade Madrasah Indonesia (OMI) tingkat Kabupaten Subang tahun 2025. Madrasah ini menyelenggarakan kegiatan belajar mengajar yang mencakup aspek akademik, keagamaan, serta berbagai kegiatan ekstrakurikuler bagi para siswanya. </p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                Be Part
+                                Jadilah
                                 <br />
-                                Of Our
+                                Bagian Dari
                                 <br />
-                                Story!
+                                Kisah Kami
                             </h4>
                         </div>
                     </li>
@@ -243,74 +371,14 @@
             </div>
         </section>
         <!-- Team-->
-        <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Marketer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Developer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
-            </div>
-        </section>
         <!-- Clients-->
-        <div class="py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Hubungi kami</h2>
+                    <h3 class="section-subheading text-muted">Jika ada pertanyaan atau sesuatu yang ingin di sampaikan silahkan hubungi kami</h3>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
@@ -324,26 +392,26 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" id="name" type="text" placeholder="Nama Anda *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Diperlukan nama.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <input class="form-control" id="email" type="email" placeholder="Email Anda *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Diperlukan email.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email tidak valid.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" id="phone" type="tel" placeholder="Telepon Anda *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Nomor telepon wajib diisi.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <textarea class="form-control" id="message" placeholder="Pesan Anda *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Sebuah pesan diperlukan.</div>
                             </div>
                         </div>
                     </div>
@@ -353,8 +421,8 @@
                     <!-- has successfully submitted-->
                     <div class="d-none" id="submitSuccessMessage">
                         <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
+                            <div class="fw-bolder">Pengiriman formulir berhasil!</div>
+                            Untuk mengaktifkan formulir ini, daftar di
                             <br />
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
@@ -363,9 +431,10 @@
                     <!---->
                     <!-- This is what your users will see when there is-->
                     <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Kesalahan saat mengirim pesan!</div></div>
                     <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">
+Kirim Pesan</button></div>
                 </form>
             </div>
         </section>
@@ -373,15 +442,23 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- Kiri (Copyright) -->
+                    <div class="col-lg-6 text-lg-start text-center mb-3 mb-lg-0">
+                        &copy; MTs Darul Hikam Binong 2026 | Created By 
+                        <a href="https://www.erpeel.id/" target="_blank" style="color:blue;">RPL SMKN 1 Binong</a>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+
+                    <!-- Kanan (Sosial Media) -->
+                    <div class="col-lg-6 text-lg-end text-center">
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/mts.darulhikam/" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/mts.darul.hikam.binong.2025" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/@mtsdarulhikambinong7990" aria-label="Youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -391,30 +468,33 @@
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">PASKIBRA</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/Foto mts/paskib 1.jpeg')}}" alt="..." />
+                                    <p>Paskibra (Pasukan Pengibar Bendera) adalah kegiatan ekstrakurikuler di sekolah yang berfokus pada pelatihan baris-berbaris, kedisiplinan, serta tanggung jawab dalam mengibarkan bendera, terutama saat upacara seperti Hari Kemerdekaan Indonesia.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Threads
+                                            <p>Ekskul Paskibra</p>
+                                            
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Illustration
+                                            <p>
+                                                Paskibra merupakan organisasi siswa yang dilatih untuk:
+                                                Mengibarkan dan menurunkan bendera merah putih
+                                                Melaksanakan upacara dengan tertib dan khidmat
+                                                Menjadi contoh kedisiplinan bagi siswa lain
+                                            </p>
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
+                                       Keluar
+                                    </button>   
                                 </div>
                             </div>
                         </div>
@@ -426,29 +506,28 @@
         <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">PRAMUKA</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/Foto mts/pramuka 4.jpeg')}}" alt="..." />
+                                    <p>Pramuka (Praja Muda Karana) adalah kegiatan ekstrakurikuler yang bertujuan membentuk karakter siswa agar mandiri, disiplin, dan bertanggung jawab melalui kegiatan di alam terbuka.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Explore
+                                            <p>Ekskul Pramuka</p>
+                                            
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
+                                            <p>Pramuka mengajarkan keterampilan hidup (life skills), kerja sama, serta kepemimpinan dengan cara yang menyenangkan dan edukatif.</p>
+                                            
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                       Keluar
                                     </button>
                                 </div>
                             </div>
@@ -461,29 +540,28 @@
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Futsal</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/Foto mts/futsal 1.jpeg')}}" alt="..." />
+                                    <p>Futsal adalah kegiatan ekstrakurikuler olahraga yang dimainkan oleh dua tim, masing-masing terdiri dari 5 pemain, di lapangan yang lebih kecil dibanding sepak bola.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Finish
+                                            <p>Ekskul Futsal</p>
+                                            
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Identity
+                                            <p>Futsal bertujuan mengembangkan kemampuan bermain bola, kebugaran fisik, serta kerja sama tim.</p>
+                                            
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                       Keluar
                                     </button>
                                 </div>
                             </div>
@@ -496,29 +574,28 @@
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Voli</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/Foto mts/voli 1.jpeg')}}" alt="..." />
+                                    <p>Voli (Bola Voli) adalah kegiatan ekstrakurikuler olahraga yang dimainkan oleh dua tim, masing-masing terdiri dari 6 pemain, dengan tujuan memukul bola melewati net agar jatuh di area lawan.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Lines
+                                            <p>Ekskul Voli</p>
+                                            
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Branding
+                                            <p>Voli bertujuan melatih keterampilan bermain bola, kekuatan fisik, serta kerja sama tim.</p>
+                                            
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                       Keluar
                                     </button>
                                 </div>
                             </div>
@@ -531,29 +608,26 @@
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Karate</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/eskul/eskul 5.jpg')}}" alt="..." />
+                                    <p>Karate adalah kegiatan bela diri di sekolah yang mengajarkan teknik pukulan, tendangan, dan pertahanan diri. Selain melatih fisik, eskul ini juga membentuk disiplin, percaya diri, dan kontrol emosi.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Southwest
+                                            <p>Ekskul Karate</p>
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Website Design
+                                            <p>Karate bertujuan untuk melatih kemampuan bela diri, meningkatkan kebugaran fisik, serta membentuk disiplin, percaya diri, dan karakter yang kuat pada siswa.</p>
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                       Keluar
                                     </button>
                                 </div>
                             </div>
@@ -566,29 +640,26 @@
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    <h2 class="text-uppercase">Seni Tari</h2>
+                                    <p class="item-intro text-muted"></p>
+                                    <img class="img-fluid d-block mx-auto" src="{{asset('mts/assets/img/eskul/eskul 6.jpg')}}" alt="..." />
+                                    <p>Seni tari adalah bentuk seni yang menggunakan gerakan tubuh berirama untuk mengekspresikan perasaan, cerita, atau budaya. Seni tari biasanya diiringi musik dan mengandung nilai keindahan serta makna tertentu.</p>
                                     <ul class="list-inline">
                                         <li>
-                                            <strong>Client:</strong>
-                                            Window
+                                            <p>Ekskul Seni Tari</p>
                                         </li>
                                         <li>
-                                            <strong>Category:</strong>
-                                            Photography
+                                            <p>Seni tari adalah mengembangkan bakat dan kreativitas siswa dalam menari, melatih kepercayaan diri, serta melestarikan budaya melalui gerakan dan ekspresi seni.</p>
                                         </li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                       Keluar
                                     </button>
                                 </div>
                             </div>
