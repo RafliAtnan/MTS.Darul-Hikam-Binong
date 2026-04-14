@@ -6,9 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Eskul extends Model
 {
-    protected $table = 'eskul';
-
-    protected $fillable = [
-        'nama'
-    ];
+    protected $fillable = ['nama', 'deskripsi', 'foto'];
 }

@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Tambah Data Guru - MTS Darul Hikam Binong</title>
+    <!-- SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -109,23 +111,25 @@
 </head>
 
 <body class="bg-surface text-on-surface min-h-screen pb-24">
+    @if(session('success'))
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Berhasil!',
+            text: '{{ session('
+            success ') }}',
+            confirmButtonColor: '#3085d6'
+        });
+    </script>
+    @endif
     <!-- TopAppBar -->
     <header class="fixed top-0 w-full z-50 glass-nav shadow-sm bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg">
         <div class="flex items-center justify-between px-6 py-4 w-full">
             <div class="flex items-center gap-4">
-                <button class="text-blue-800 dark:text-blue-400 scale-95 active:scale-90 transition-transform">
-                    <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+                <button class="text-blue-800 dark:text-blue-400 scale-95 active:scale-90 transition-transform"><a href="/admin/guru">
+                        <span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span></a>
                 </button>
-                <h1 class="font-['Lexend'] font-bold tracking-tight text-blue-900 dark:text-white text-lg">Add Teacher Data</h1>
-            </div>
-            <div class="flex items-center gap-3">
-                <span class="hidden md:block text-right">
-                    <p class="text-xs font-bold text-blue-900">Admin User</p>
-                    <p class="text-[10px] text-slate-500">Super Administrator</p>
-                </span>
-                <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container overflow-hidden ring-2 ring-white">
-                    <img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="professional headshot of a school administrator in a clean office setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrVyB22x28uYvk6G0qKdxf_m1wsLjFAs5iOL24E1viXSRIeTNSRpPHzcAaNtkL1xisuCwMvjueKU_gPO62QS1IT5TdMIDuo2vr90K0lzcfAoCe_70ZUuXC_zS-JNWzec59zJo269uyWHVj7DpS9RNUXEUCknAwO_4tQ2BrQBKertpytAX1nuHFUXUtvya8LhPJgwcbDSdnrQvyF9GnajDFE2osJzhy7th8a38zHSsIjRFo16aQkt4cuLJr09mGYoQBl6grltJMtVA" />
-                </div>
+                <h1 class="font-['Lexend'] font-bold tracking-tight text-blue-900 dark:text-white text-lg">Tambah Guru</h1>
             </div>
         </div>
     </header>
@@ -143,101 +147,114 @@
             </div>
             <div class="p-8 space-y-8">
                 <!-- Grid Layout for Inputs -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Full Name Field -->
-                    <div class="space-y-2">
-                        <label class="block font-label text-sm font-semibold text-on-surface-variant" for="full_name">Nama Lengkap</label>
-                        <input class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all duration-300 placeholder:text-slate-300" id="full_name" placeholder="Contoh: Dr. Ahmad Hidayat, M.Pd" type="text" />
-                        <p class="text-error text-xs font-medium mt-1 flex items-center gap-1">
-                            <span class="material-symbols-outlined text-[14px]">error</span>
-                            Nama Guru harus diisi
-                        </p>
-                    </div>
-                    <!-- Position Field -->
-                    <div class="space-y-2">
-                        <label class="block font-label text-sm font-semibold text-on-surface-variant" for="position">Jabatan / Mata Pelajaran</label>
-                        <input class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 transition-all duration-300 placeholder:text-slate-300" id="position" placeholder="Contoh: Guru Matematika" type="text" />
-                    </div>
-                </div>
-                <!-- Photo Upload Area -->
-                <div class="space-y-4">
-                    <label class="block font-label text-sm font-semibold text-on-surface-variant">Pas Foto Guru</label>
-                    <div class="group relative flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-outline-variant rounded-xl bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer overflow-hidden">
-                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                            <span class="material-symbols-outlined text-4xl text-primary mb-3" data-icon="add_a_photo">add_a_photo</span>
-                            <p class="mb-2 text-sm text-on-surface font-medium">Klik untuk unggah foto</p>
-                            <p class="text-xs text-on-surface-variant">PNG, JPG atau JPEG (Maks. 2MB)</p>
+
+                <form action="/admin/guru/tambah" method="POST" enctype="multipart/form-data">
+                    @csrf
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- KIRI -->
+                        <div class="space-y-4">
+
+                            <!-- Nama -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold">Nama Lengkap</label>
+                                <input
+                                    type="text"
+                                    name="nama"
+                                    class="w-full border-b-2 focus:border-primary outline-none py-2 "
+                                    placeholder="Contoh: Dr. Ahmad Hidayat, M.Pd"
+                                    required>
+                            </div>
+
+                            <!-- Mapel -->
+                            <div class="space-y-2">
+                                <label class="block text-sm font-semibold">Mata Pelajaran</label>
+                                <input
+                                    type="text"
+                                    name="mapel"
+                                    class="w-full border-b-2 focus:border-primary outline-none py-2"
+                                    placeholder="Contoh: Guru Matematika"
+                                    required>
+                            </div>
+
                         </div>
-                        <input class="absolute inset-0 opacity-0 cursor-pointer" type="file" />
+
+                        <!-- KANAN (UPLOAD FOTO) -->
+                        <div class="space-y-4">
+                            <label class="block text-sm font-semibold">Pas Foto Guru</label>
+
+                            <div class="relative w-56 h-56 mx-auto border-2 border-dashed rounded-xl overflow-hidden bg-gray-100">
+                                <!-- PREVIEW -->
+                                <img id="preview" class="hidden w-full h-full object-cover">
+                                <!-- PLACEHOLDER -->
+                                <div id="placeholder" class="flex flex-col items-center justify-center h-full text-center">
+                                    <span class="material-symbols-outlined text-3xl text-primary">add_a_photo</span>
+                                    <p class="text-xs">Upload Foto</p>
+                                </div>
+
+                                <!-- INPUT -->
+                                <input
+                                    type="file"
+                                    id="foto"
+                                    name="foto"
+                                    class="absolute inset-0 opacity-0 cursor-pointer">
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <!-- Subtle Informational Alert -->
-                <div class="bg-blue-50/50 rounded-lg p-4 flex gap-3 items-start">
-                    <span class="material-symbols-outlined text-primary" data-icon="info">info</span>
-                    <p class="text-xs text-on-secondary-container leading-relaxed">Pastikan data yang dimasukkan telah sesuai dengan dokumen resmi kependidikan (NUPTK/Sertifikasi) untuk sinkronisasi sistem akademik.</p>
-                </div>
-                <!-- Action Buttons -->
-                <div class="flex flex-col md:flex-row gap-4 pt-4 border-t border-outline-variant/10">
-                    <button class="flex-1 md:flex-none md:min-w-[160px] bg-gradient-to-r from-primary to-primary-container text-on-primary font-semibold py-4 rounded-xl hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20">
-                        Simpan
-                    </button>
-                    <button class="flex-1 md:flex-none md:min-w-[120px] bg-surface-container-high text-on-surface font-semibold py-4 rounded-xl hover:bg-surface-container-highest transition-colors">
-                        Batal
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Secondary Section: Preview or Stats (Bento style) -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div class="md:col-span-2 bg-primary-container/10 p-6 rounded-xl border border-primary/5">
-                <div class="flex items-center gap-4 mb-4">
-                    <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white" data-icon="school">school</span>
+
+                    <!-- BUTTON -->
+                    <div class="mt-6">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">
+                            Simpan Data
+                        </button>
                     </div>
-                    <div>
-                        <h4 class="font-headline text-lg text-primary font-bold">Status Kepegawaian</h4>
-                        <p class="text-xs text-on-secondary-container">Total pengajar aktif saat ini</p>
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <div class="bg-white/60 p-4 rounded-lg flex-1">
-                        <p class="text-[10px] uppercase tracking-wider font-bold text-slate-500">Guru Tetap</p>
-                        <p class="text-2xl font-headline font-bold text-primary">24</p>
-                    </div>
-                    <div class="bg-white/60 p-4 rounded-lg flex-1">
-                        <p class="text-[10px] uppercase tracking-wider font-bold text-slate-500">Guru Honorer</p>
-                        <p class="text-2xl font-headline font-bold text-primary">12</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-surface-container-highest p-6 rounded-xl flex flex-col justify-center items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-white mb-4 flex items-center justify-center shadow-sm">
-                    <span class="material-symbols-outlined text-3xl text-primary" data-icon="verified">verified</span>
-                </div>
-                <p class="font-headline font-bold text-on-surface">Data Terverifikasi</p>
-                <p class="text-xs text-on-surface-variant px-4">Semua data guru akan melewati proses audit internal.</p>
+                </form>
             </div>
         </div>
     </main>
-    <!-- BottomNavBar (Mobile Only) -->
-    <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl">
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-300 active:scale-95 duration-200" href="#">
-            <span class="material-symbols-outlined" data-icon="home">home</span>
-            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase">Home</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/40 rounded-2xl px-3 py-1 active:scale-95 duration-200" href="#">
-            <span class="material-symbols-outlined" data-icon="badge">badge</span>
-            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase">Staff</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-300 active:scale-95 duration-200" href="#">
-            <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
-            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase">Records</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-600 dark:hover:text-blue-300 active:scale-95 duration-200" href="#">
-            <span class="material-symbols-outlined" data-icon="settings">settings</span>
-            <span class="font-['Inter'] text-[10px] font-semibold tracking-wide uppercase">Settings</span>
-        </a>
-    </nav>
+    <script>
+        document.getElementById('foto').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const preview = document.getElementById('preview');
+            const placeholder = document.getElementById('placeholder');
+
+            if (!file) return;
+
+            // ✅ VALIDASI FILE
+            const validTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+            if (!validTypes.includes(file.type)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Format Salah!',
+                    text: 'Hanya boleh JPG, PNG, JPEG'
+                });
+                e.target.value = '';
+                return;
+            }
+
+            if (file.size > 2 * 1024 * 1024) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Terlalu Besar!',
+                    text: 'Maksimal ukuran 2MB'
+                });
+                e.target.value = '';
+                return;
+            }
+
+            // ✅ AUTO PREVIEW + FIT
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                preview.src = event.target.result;
+                preview.classList.remove('hidden');
+                placeholder.classList.add('hidden');
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
 </body>
 
 </html>

@@ -111,13 +111,11 @@
     <header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
         <div class="flex items-center justify-between px-6 py-4 w-full">
             <div class="flex items-center gap-4">
-                <button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity">
-                    <span class="material-symbols-outlined text-blue-800 dark:text-blue-400">arrow_back</span>
+                <button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity"><a href="/admin/eskul">
+                        <span class="material-symbols-outlined text-blue-800 dark:text-blue-400">arrow_back</span></a>
                 </button>
-                <h1 class="font-lexend font-bold tracking-tight text-lg text-blue-800 dark:text-blue-400">Add Activity</h1>
+                <h1 class="font-lexend font-bold tracking-tight text-lg text-blue-800 dark:text-blue-400">Tambah Ekstrakurikuler</h1>
             </div>
-            <div class="font-lexend font-black text-blue-900 dark:text-blue-200">DHB</div>
-        </div>
     </header>
     <main class="max-w-3xl mx-auto px-6 pt-12 pb-32">
         <div class="mb-10 text-center">
@@ -126,64 +124,60 @@
         </div>
         <!-- Form Card -->
         <div class="bg-surface-container-lowest rounded-xl shadow-[0_20px_40px_rgba(0,26,64,0.06)] p-8 md:p-12 overflow-hidden relative">
-            <!-- Decorative Gradient Element -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16"></div>
-            <form class="space-y-8 relative z-10">
-                <!-- Nama Kegiatan -->
+
+            <!-- Decorative -->
+            <!-- <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16"></div> -->
+
+            <form action="/admin/eskul/tambah" method="POST" enctype="multipart/form-data" class="space-y-8 relative z-10">
+                @csrf
+
+                <!-- Nama -->
                 <div class="space-y-2">
-                    <label class="block text-sm font-semibold text-on-surface-variant font-label" for="nama_kegiatan">Nama Ekstrakurikuler</label>
-                    <input aria-describedby="error-nama" aria-invalid="true" class="w-full bg-transparent border-0 border-b-2 border-error focus:ring-0 focus:border-primary px-0 py-3 text-lg transition-all" id="nama_kegiatan" name="nama_kegiatan" placeholder="Contoh: Robotik Darul Hikam" type="text" />
-                    <p class="text-error text-xs font-medium mt-1 flex items-center gap-1" id="error-nama">
-                        <span class="material-symbols-outlined text-sm">error</span>
-                        Bagian ini wajib diisi sebelum melanjutkan.
-                    </p>
+                    <label class="block text-sm font-semibold">Nama Ekstrakurikuler</label>
+                    <input name="nama"
+                        class="w-full border-b-2 focus:border-primary px-0 py-3 text-lg"
+                        placeholder="Contoh: Robotik Darul Hikam" type="text" required />
                 </div>
-                <!-- Kategori -->
-                <div class="space-y-2">
-                    <label class="block text-sm font-semibold text-on-surface-variant font-label" for="kategori">Kategori</label>
-                    <div class="relative">
-                        <select class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-primary px-0 py-3 text-on-surface appearance-none cursor-pointer transition-all" id="kategori" name="kategori">
-                            <option disabled="" selected="" value="">Pilih Kategori Kegiatan</option>
-                            <option value="olahraga">Olahraga</option>
-                            <option value="seni">Seni</option>
-                            <option value="keagamaan">Keagamaan</option>
-                        </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-outline">
-                            <span class="material-symbols-outlined">expand_more</span>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Deskripsi -->
                 <div class="space-y-2">
-                    <label class="block text-sm font-semibold text-on-surface-variant font-label" for="deskripsi">Deskripsi Kegiatan</label>
-                    <textarea class="w-full bg-surface-container-low border-0 border-b-2 border-outline-variant focus:ring-0 focus:border-primary px-4 py-3 text-on-surface transition-all rounded-lg" id="deskripsi" name="deskripsi" placeholder="Tuliskan visi, misi, dan jadwal rutin kegiatan..." rows="4"></textarea>
+                    <label class="block text-sm font-semibold">Deskripsi</label>
+                    <textarea name="deskripsi"
+                        class="w-full border p-3 rounded-lg"
+                        placeholder="Deskripsi kegiatan..."
+                        rows="4">Deskripsi Kegiatan</textarea>
                 </div>
-                <!-- Image Upload Area -->
-                <div class="space-y-4">
-                    <label class="block text-sm font-semibold text-on-surface-variant font-label">Upload Gambar Kegiatan</label>
-                    <div class="group relative flex flex-col items-center justify-center w-full h-56 border-2 border-dashed border-outline-variant rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors cursor-pointer overflow-hidden">
-                        <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20" type="file" />
-                        <div class="flex flex-col items-center justify-center p-6 text-center space-y-3">
-                            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                                <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">add_photo_alternate</span>
-                            </div>
-                            <div>
-                                <p class="text-on-surface font-semibold">Klik atau seret file untuk upload</p>
-                                <p class="text-outline text-xs mt-1">PNG, JPG up to 10MB (Rekomendasi 16:9)</p>
-                            </div>
-                        </div>
-                        <img class="hidden absolute inset-0 w-full h-full object-cover opacity-20" data-alt="Modern educational facility with students engaged in diverse extracurricular activities in a bright airy studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNVXOaw4LYZqI1tBKo_uY7DbB5jYyRAD4gHOljopQRFL-5VPtMw-1rrhX8L5X0HjhNjUcOO96QT5r_fSTKdrJycA3Og6AJkmHsh5Q43Mc9UUhiX8N5VNCGJRPTt-TnMoyKeoNzK3yZlsJORv4aXjhN2FYm4_kgIh-giSXrsVSk0upla-FDBNkqgOrUz1WSaG8DCxey01_IkqTxSyMsbuhSgzXC4EVQ18Cg2jh2EBrc3jXHL0zFw9K5cCTPA1pkWD7MSpElyaPiEkA" />
+
+                <!-- UPLOAD -->
+                <div id="uploadBox"
+                    class="relative w-full border-2 border-dashed rounded-xl overflow-hidden flex items-center justify-center bg-gray-100 p-4">
+
+                    <!-- INPUT -->
+                    <input id="foto" name="foto"
+                        class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
+                        type="file" accept="image/*" />
+
+                    <!-- TEXT -->
+                    <div id="uploadText" class="text-center z-10">
+                        <p class="font-semibold">Klik atau upload gambar</p>
+                        <p class="text-xs text-gray-400">PNG / JPG</p>
                     </div>
+
+                    <!-- PREVIEW -->
+                    <img id="previewFoto"
+                        class="hidden max-w-full h-auto object-contain z-10" />
                 </div>
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 pt-6">
-                    <button class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary font-lexend font-bold py-4 px-8 rounded-xl active:scale-95 hover:scale-[1.02] transition-all shadow-lg shadow-primary/20" type="submit">
-                        Simpan Kegiatan
+
+                <!-- BUTTON -->
+                <div class="flex gap-4 pt-6">
+                    <button type="submit" class="flex-1 bg-blue-500 text-white py-3 rounded-xl">
+                        Tambah
                     </button>
-                    <button class="flex-1 bg-surface-container-high text-on-surface font-lexend font-bold py-4 px-8 rounded-xl active:scale-95 hover:bg-surface-dim transition-all" type="button">
+                    <a href="/admin/eskul" class="flex-1 text-center bg-gray-300 py-3 rounded-xl">
                         Batal
-                    </button>
+                    </a>
                 </div>
+
             </form>
         </div>
         <!-- Footer Stats / Info (Bento-lite) -->
@@ -197,36 +191,39 @@
                     <p class="text-xs text-blue-700/80 leading-relaxed">Data yang disimpan akan langsung ditampilkan di website profil sekolah.</p>
                 </div>
             </div>
-            <div class="bg-secondary-container/30 p-6 rounded-xl flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-secondary-container/50 flex items-center justify-center text-on-secondary-container">
-                    <span class="material-symbols-outlined">history</span>
-                </div>
-                <div>
-                    <h4 class="font-lexend font-bold text-on-secondary-container text-sm">Draft Otomatis</h4>
-                    <p class="text-xs text-on-secondary-container/80 leading-relaxed">Perubahan formulir Anda disimpan sebagai draf lokal secara berkala.</p>
-                </div>
-            </div>
         </div>
     </main>
-    <!-- BottomNavBar -->
-    <nav class="fixed bottom-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,26,64,0.06)] border-t border-slate-100 dark:border-slate-800 flex justify-around items-center px-4 pb-6 pt-3">
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors active:scale-90 duration-150" href="#">
-            <span class="material-symbols-outlined">dashboard</span>
-            <span class="font-lexend text-[11px] font-medium tracking-wide">Dashboard</span>
-        </a>
-        <a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-2xl px-5 py-2 active:scale-90 duration-150" href="#">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">exercise</span>
-            <span class="font-lexend text-[11px] font-medium tracking-wide">Activities</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors active:scale-90 duration-150" href="#">
-            <span class="material-symbols-outlined">group</span>
-            <span class="font-lexend text-[11px] font-medium tracking-wide">Students</span>
-        </a>
-        <a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors active:scale-90 duration-150" href="#">
-            <span class="material-symbols-outlined">settings</span>
-            <span class="font-lexend text-[11px] font-medium tracking-wide">Settings</span>
-        </a>
-    </nav>
+    <script>
+        document.getElementById('foto').addEventListener('change', function() {
+            let file = this.files[0];
+
+            if (file) {
+                let reader = new FileReader();
+
+                reader.onload = function(e) {
+
+                    let preview = document.getElementById('previewFoto');
+                    let text = document.getElementById('uploadText');
+                    let box = document.getElementById('uploadBox');
+
+                    preview.src = e.target.result;
+
+                    preview.onload = function() {
+                        // 🔥 ambil rasio asli gambar
+                        let ratio = preview.naturalHeight / preview.naturalWidth;
+
+                        // set tinggi box sesuai rasio
+                        box.style.height = (box.offsetWidth * ratio) + 'px';
+                    };
+
+                    preview.classList.remove('hidden');
+                    text.classList.add('hidden');
+                }
+
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>

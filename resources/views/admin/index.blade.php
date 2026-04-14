@@ -50,16 +50,16 @@
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10">
         <div class="flex items-center justify-between px-4 h-16 max-w-7xl mx-auto">
             <div class="flex items-center gap-3">
-                <div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
-                    <span class="material-symbols-outlined font-bold">school</span>
+                <div
+                    class="size-10 shrink-0 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+                    <img alt="School Logo" class="w-full h-full object-cover"
+                        data-alt="Official logo of MTS Darul Hikam Binong school"
+                        src="https://yt3.googleusercontent.com/ytc/AIdro_mlDWTRAZTCiGHxcCbvX0aK5ri1-5kM5ZDamnW4w8Jrxw=s900-c-k-c0x00ffffff-no-rj" />
                 </div>
                 <div>
                     <h1 class="text-sm font-bold leading-tight text-primary">MTS Darul Hikam</h1>
                     <p class="text-[10px] uppercase tracking-wider font-semibold opacity-60">Binong - Admin Panel</p>
                 </div>
-            </div>
-            <div class="size-10 rounded-full overflow-hidden border-2 border-primary/20">
-                <img alt="Admin Profile" class="w-full h-full object-cover" data-alt="Portrait of a male school administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4iO4rollWb-BLJBmr5RDCFa5wyYP1gJO-XinDMfqsCp860TZBBtvMYfaSNvsvrvwaLSURaFoDXqTGLUJCRlJaAlKdL_fPHp4Fy92ZGqy1DESC0V3moA7W0tX50E5e0RMSot37kCnoBbERzzjvk1za_3SCTm51XOg9lGoe2_KI25gpJdp7QPwSsv8SltwCxNp7rlh1M-SkeO5REXbcrO8HW1dE_928GxdMffXMSFhJnzxgWF7UrpwPFCkIQ3POiZHEP7R_VYUxSzQ" />
             </div>
         </div>
         </div>
@@ -71,102 +71,91 @@
             <h2 class="text-2xl font-bold tracking-tight">Halo, Admin</h2>
             <p class="text-slate-500 dark:text-slate-400 text-sm">Selamat datang kembali di panel kontrol MTS Darul Hikam Binong.</p>
         </section>
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm">
-                <div class="size-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 mb-3">
-                    <span class="material-symbols-outlined">groups</span>
-                </div>
-                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Total Guru</p>
-                <div class="flex items-end gap-2 mt-1">
-                    <p class="text-2xl font-bold">42</p>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm">
-                <div class="size-10 rounded-lg bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 mb-3">
-                    <span class="material-symbols-outlined">sports_soccer</span>
-                </div>
-                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Ekstrakurikuler</p>
-                <div class="flex items-end gap-2 mt-1">
-                    <p class="text-2xl font-bold">12</p>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm">
-                <div class="size-10 rounded-lg bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-600 mb-3">
-                    <span class="material-symbols-outlined">article</span>
-                </div>
-                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Artikel</p>
-                <div class="flex items-end gap-2 mt-1">
-                    <p class="text-2xl font-bold">85</p>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm">
-                <div class="size-10 rounded-lg bg-cyan-50 dark:bg-cyan-900/20 flex items-center justify-center text-cyan-600 mb-3">
-                    <span class="material-symbols-outlined">photo_library</span>
-                </div>
-                <p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase">Galeri Foto</p>
-                <div class="flex items-end gap-2 mt-1">
-                    <p class="text-2xl font-bold">156</p>
-                </div>
-            </div>
-        </div>
-        <!-- Quick Actions & Recent Activity -->
-        <div class="grid lg:grid-cols-3 gap-6">
-            <!-- Left Column: Recent Activity -->
-            <div class="lg:col-span-2 space-y-6">
-                <div class="bg-white dark:bg-slate-900 rounded-xl border border-primary/5 overflow-hidden shadow-sm">
-                    <div class="p-4 border-b border-primary/5 flex items-center justify-between">
-                        <h3 class="font-bold">Aktivitas Terbaru</h3>
-                        <button class="text-primary text-xs font-bold">Lihat Semua</button>
+
+        <div class="spcace-y-6">
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div class="bg-white p-4 rounded-xl shadow">
+                    <div class="size-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 mb-3">
+                        <span class="material-symbols-outlined">groups</span>
                     </div>
-                    <div class="divide-y divide-primary/5">
-                        <div class="p-4 flex gap-4 items-start">
-                            <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">add_a_photo</span>
-                            </div>
-                            <div>
-                                <p class="text-sm"><span class="font-bold">Admin</span> menambahkan 5 foto baru ke album <span class="text-primary font-medium">Wisuda 2023</span></p>
-                                <p class="text-[11px] text-slate-400 mt-1">2 jam yang lalu</p>
-                            </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <p class="text-sm text-slate-500">Total Guru</p>
+                        <p class="text-2xl font-bold text-primary">
+                            {{ $totalGuru ?? $guru->total() }}
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-primary/5 shadow-sm">
+                    <div class="size-10 rounded-lg bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 mb-3">
+                        <span class="material-symbols-outlined">sports_soccer</span>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                        <p class="text-sm text-slate-500">Total Ekstra</p>
+                        <p class="text-2xl font-bold text-primary">
+                            {{ $totalEkstrakurikuler ?? $eskul->total() }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Quick Actions & Recent Activity -->
+            <div class="flex flex-col gap-6">
+                <!-- Left Column: Recent Activity -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-white dark:bg-slate-900 rounded-xl border border-primary/5 overflow-hidden shadow-sm">
+                        <div class="p-4 border-b border-primary/5 flex items-center justify-between">
+                            <h3 class="font-bold">Aktivitas Terbaru</h3>
+                            <button class="text-primary text-xs font-bold">Lihat Semua</button>
                         </div>
-                        <div class="p-4 flex gap-4 items-start">
-                            <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">edit_note</span>
+                        <div class="divide-y divide-primary/5">
+                            <div class="p-4 flex gap-4 items-start">
+                                <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">add_a_photo</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm"><span class="font-bold">Admin</span> menambahkan 5 foto baru ke album <span class="text-primary font-medium">Wisuda 2023</span></p>
+                                    <p class="text-[11px] text-slate-400 mt-1">2 jam yang lalu</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="text-sm"><span class="font-bold">Ustadz Ahmad</span> menerbitkan artikel <span class="text-primary font-medium">"Pentingnya Adab di Sekolah"</span></p>
-                                <p class="text-[11px] text-slate-400 mt-1">5 jam yang lalu</p>
+                            <div class="p-4 flex gap-4 items-start">
+                                <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">edit_note</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm"><span class="font-bold">Ustadz Ahmad</span> menerbitkan artikel <span class="text-primary font-medium">"Pentingnya Adab di Sekolah"</span></p>
+                                    <p class="text-[11px] text-slate-400 mt-1">5 jam yang lalu</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-4 flex gap-4 items-start">
-                            <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                                <span class="material-symbols-outlined text-[20px]">person_add</span>
-                            </div>
-                            <div>
-                                <p class="text-sm"><span class="font-bold">Admin</span> mendaftarkan <span class="text-primary font-medium">Siti Aminah, S.Pd</span> sebagai Guru baru</p>
-                                <p class="text-[11px] text-slate-400 mt-1">Kemarin, 14:20</p>
+                            <div class="p-4 flex gap-4 items-start">
+                                <div class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <span class="material-symbols-outlined text-[20px]">person_add</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm"><span class="font-bold">Admin</span> mendaftarkan <span class="text-primary font-medium">Siti Aminah, S.Pd</span> sebagai Guru baru</p>
+                                    <p class="text-[11px] text-slate-400 mt-1">Kemarin, 14:20</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Right Column: Shortcuts -->
-            <div class="space-y-6">
-                <div class="bg-primary rounded-xl p-5 text-white shadow-lg shadow-primary/20">
-                    <h3 class="font-bold mb-4">Akses Cepat</h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <button class="flex flex-col items-center justify-center p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors border border-white/10">
-                            <span class="material-symbols-outlined mb-1">post_add</span>
-                            <span class="text-[10px] font-medium uppercase">Tambah Artikel</span>
-                        </button>
-                        <button class="flex flex-col items-center justify-center p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors border border-white/10">
-                            <span class="material-symbols-outlined mb-1">upload_file</span>
-                            <span class="text-[10px] font-medium uppercase">Upload Galeri</span>
-                        </button>
-                        <button class="flex flex-col items-center justify-center p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors border border-white/10">
-                            <span class="material-symbols-outlined mb-1">person_add</span>
-                            <span class="text-[10px] font-medium uppercase">Input Guru</span>
-                        </button>
+                <!-- Right Column: Shortcuts -->
+                <div class="space-y-6">
+                    <div class="bg-primary rounded-xl p-5 text-white shadow-lg shadow-primary/20">
+                        <h3 class="font-bold mb-4">Akses Cepat</h3>
+                        <div class="flex flex-col gap-4">
+                            <button>
+                                <a class="flex flex-col items-center justify-center p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors border border-white/10" href="/admin/eskul/tambah">
+                                    <span class="material-symbols-outlined mb-1">post_add</span>
+                                    <span class="text-[10px] font-medium uppercase">Tambah Eksul</span>
+                                </a>
+                            </button>
+                            <button>
+                                <a class="flex flex-col items-center justify-center p-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors border border-white/10" href="/admin/guru/tambah">
+                                    <span class="material-symbols-outlined mb-1">person_add</span>
+                                    <span class="text-[10px] font-medium uppercase">Tambah Guru</span>
+                                </a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,23 +168,23 @@
                 <span class="material-symbols-outlined fill-1">dashboard</span>
                 <span class="text-[10px] font-bold">Beranda</span>
             </a>
-            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="admin.guru.edit">
-                <span class="material-symbols-outlined font-bold">group</span>
+            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="/admin/guru">
+                <span class="material-symbols-outlined">group</span>
                 <span class="text-[10px] font-bold uppercase tracking-tight">Guru</span>
             </a>
-            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
-                <span class="material-symbols-outlined">description</span>
-                <span class="text-[10px] font-medium">Konten</span>
+            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="/admin/eskul">
+                <span class="material-symbols-outlined font-fill">sports_basketball</span>
+                <span class="text-[10px] font-medium">Ekskul</span>
             </a>
-            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
-                <span class="material-symbols-outlined">photo_library</span>
-                <span class="text-[10px] font-medium">Galeri</span>
-            </a>
-            <a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
-                <span class="material-symbols-outlined">account_circle</span>
-                <span class="text-[10px] font-medium">Profil</span>
-            </a>
+            <form method="POST" action="/logout">
+                @csrf
+                <button type="submit" class="flex flex-col items-center gap-1 text-slate-500 hover:text-red-500 transition-colors">
+                    <span class="material-symbols-outlined text-xl">logout</span>
+                    <span class="text-[10px] font-medium">Keluar</span>
+                </button>
+            </form>
         </div>
+
     </nav>
 </body>
 

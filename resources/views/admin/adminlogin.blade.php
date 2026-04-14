@@ -55,7 +55,7 @@
                         class="size-10 shrink-0 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
                         <img alt="School Logo" class="w-full h-full object-cover"
                             data-alt="Official logo of MTS Darul Hikam Binong school"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkHZt530AHsAbl2nl8Tp1pbgOxoBOdnlK3bfNREYGqJmqOpwbAkghHvK5nyposWDL5-gKMyr1h2znnFxzDBZnPdLsW3O-5pANXp2rQVene_cEGQv5DjzHtCRWHiugLuKvz1w7JSuoHzu78T6STt3ylmpf6oJ-Yy5sYOkmxDeHmaeUhLFp2c3uX-rNmjJZtumOsz51vSZ1Qw77IAQ14YlPqHrWjFi-Z9M87qJNRLV-9KeHjLs0Dl3acSBW71swXXU2E01XlGQhlIeA" />
+                            src="https://yt3.googleusercontent.com/ytc/AIdro_mlDWTRAZTCiGHxcCbvX0aK5ri1-5kM5ZDamnW4w8Jrxw=s900-c-k-c0x00ffffff-no-rj" />
                     </div>
                     <h1 class="text-slate-900 dark:text-slate-100 text-lg font-bold tracking-tight">MTS Darul Hikam
                         Binong</h1>
@@ -72,38 +72,40 @@
                     <p class="text-slate-500 dark:text-slate-400 text-sm">Silahkan masukan akun anda untuk mengakses panel admin.</p>
                 </div>
 
-                <!-- Email Input -->
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-slate-700 dark:text-slate-300 text-sm font-medium" for="email">Email</label>
-                    <div class="relative">
-                        <input class="form-input block w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12 px-4 transition-colors" id="email" type="email" />
-                    </div>
+                @if(session('success'))
+                <div class="mb-4 text-green-500 text-sm">
+                    {{ session('success') }}
                 </div>
-                <!-- Password Input -->
-                <div class="flex flex-col gap-1.5">
-                    <label class="text-slate-700 dark:text-slate-300 text-sm font-medium" for="password">Password</label>
-                    <div class="relative flex items-center">
-                        <input class="form-input block w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-primary h-12 pl-4 pr-12 transition-colors" id="password" type="password" />
-                        <button class="absolute right-3 text-slate-400 hover:text-primary transition-colors focus:outline-none" type="button">
-                            <span class="material-symbols-outlined">visibility</span>
-                        </button>
+                @endif
+
+                <form method="POST" action="/admin">
+                    @csrf
+
+                    <!-- SESSION -->
+                    @if(session('error'))
+                    <div class="mb-4 text-red-500 text-sm">
+                        {{ session('error') }}
                     </div>
-                </div>
-                <div class="flex items-center justify-between py-1">
-                    <div class="flex items-center">
-                        <input class="h-4 w-4 rounded border-slate-300 text-primary focus:ring-primary" id="remember-me" name="remember-me" type="checkbox" />
-                        <label class="ml-2 block text-sm text-slate-600 dark:text-slate-400" for="remember-me">Remember me</label>
+                    @endif
+
+                    <!-- Email -->
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-slate-700 text-sm font-medium">Email</label>
+                        <input name="email" class="form-input w-full h-12 px-4 rounded-lg" type="email" required />
                     </div>
-                    <div class="text-sm">
-                        <a class="font-medium text-primary hover:underline" href="#">Forgot password?</a>
+
+                    <!-- Password -->
+                    <div class="flex flex-col gap-1.5 mt-4">
+                        <label class="text-slate-700 text-sm font-medium">Password</label>
+                        <input name="password" class="form-input w-full h-12 px-4 rounded-lg" type="password" required />
                     </div>
-                </div>
-                <!-- Sign In Button -->
-                <button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3.5 rounded-lg transition-all shadow-md shadow-primary/20 flex items-center justify-center gap-2" type="submit">
-                    Sign In
-                    <span class="material-symbols-outlined text-lg">login</span>
-                </button>
+
+                    <!-- Button -->
+                    <button class="w-full mt-6 bg-primary text-white py-3 rounded-lg" type="submit">
+                        Masuk
+                    </button>
                 </form>
+
                 <div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 text-center">
                     <p class="text-slate-500 dark:text-slate-400 text-xs">
                         Back to <a class="text-primary font-medium hover:underline" href="/">Home Website</a>
